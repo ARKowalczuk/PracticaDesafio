@@ -12,7 +12,7 @@ using Practica.Infraestructure.DataAccess;
 namespace Practica.API.Migrations
 {
     [DbContext(typeof(PedidosContext))]
-    [Migration("20220610124217_NewMigration")]
+    [Migration("20220701121820_NewMigration")]
     partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,7 +43,6 @@ namespace Practica.API.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("EstadoDelPedido")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("NumeroDePedido")

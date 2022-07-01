@@ -41,7 +41,6 @@ namespace Practica.API.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("EstadoDelPedido")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<long?>("NumeroDePedido")

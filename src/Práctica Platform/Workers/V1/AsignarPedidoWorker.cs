@@ -59,11 +59,11 @@ namespace Practica.API.Workers.V1
                 }
                 catch (ConsumeException ex)
                 {
-                    _logger.LogError($"an error occured: {ex.Error.Reason}", ex);
+                    _logger.LogError(ex, $"an error occured: {ex.Error.Reason}");
                 }
                 catch (Exception e)
                 {
-                    _logger.LogError($"Error asignando pedido", e);
+                    _logger.LogError(e, $"Error asignando pedido");
                 }
             }
 

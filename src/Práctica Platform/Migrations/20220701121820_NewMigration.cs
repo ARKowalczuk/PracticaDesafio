@@ -17,7 +17,7 @@ namespace Practica.API.Migrations
                     NumeroDePedido = table.Column<long>(type: "bigint", nullable: true),
                     CicloDelPedido = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CodigoDeContratoInterno = table.Column<long>(type: "bigint", nullable: false),
-                    EstadoDelPedido = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EstadoDelPedido = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CuentaCorriente = table.Column<long>(type: "bigint", nullable: false),
                     Cuando = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
