@@ -15,6 +15,6 @@ jobs:
       - name: Run script file
         run: |
            ls
-           chmod +x ./public/scripts/ci.sh
-           ./public/scripts/ci.sh
+           chmod +x $(pwd)/.github/scripts/ci.sh
+           $(pwd)/.github/scripts/ci.sh
         shell: bash
