@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run script file
-            chmod +x ./public/scripts/ci.sh
-            ./public/scripts/ci.sh
-            shell: bash
+        run: |
+           chmod +x ./public/scripts/ci.sh
+           ./public/scripts/ci.sh
+        shell: bash
