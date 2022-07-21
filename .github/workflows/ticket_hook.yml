@@ -1,30 +1,18 @@
-name: Tag Validation
-
+name: ticket message sender
 on:
   push:
     branches:
       - test.ci 
-    pull_request:
+  pull_request:
     branches:
       - test.ci
 
 jobs:
-
-  tag_check:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  sending_message:
+    runs-on: ubuntu-20.04
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Check current directory
-        run: pwd
-      - name: Download the script
-        run: curl -o $PWD/ci.sh https://raw.githubusercontent.com/foo/git-workflows/master/scripts/tag_verify.sh
-      - name: Give script permissions
-        run: chmod +x $PWD/ci.sh
-      - name: Execute script
-        run: $PWD/ci.sh
+      - uses: actions/checkout@v2
+      - name: Run script file
+            chmod +x ./public/scripts/ci.sh
+            ./public/scripts/ci.sh
+            shell: bash
